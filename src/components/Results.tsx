@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card';
 
 type propsType = {
     results?: any;
@@ -9,16 +10,18 @@ export default function Results({ results, error }: propsType) {
     console.log(results)
     if (error) {
         return (
-            <h2>
-                {error}
-            </h2>
+            <main>
+                <h2>
+                    {error}
+                </h2>
+            </main>
         )
     }
     return (
-        <div>
-            {results.results.map((result: any) => (
-                <h2>{result.title}</h2>
+        <main>
+            {results.map((result: any) => (
+                <Card key={result.id} result={result} />
             ))}
-        </div>
+        </main>
     )
 }

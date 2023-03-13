@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if (response.ok) {
     return {
       props: {
-        results: await response.json(),
+        results: (await response.json()).results,
         error: null
       }
     }
