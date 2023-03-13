@@ -1,3 +1,6 @@
+import Header from '@/components/Header'
+import Navbar from '@/components/Navbar'
+import Results from '@/components/Results'
 import Head from 'next/head'
 
 export default function Home() {
@@ -9,9 +12,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <p>IMDb clone</p>
-      </main>
+      <Header />
+      <Navbar />
+      <Results />
     </>
   )
 }
