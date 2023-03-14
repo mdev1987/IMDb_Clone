@@ -12,7 +12,7 @@ type propsType = {
 
 export default function Home(props: propsType) {
   return (
-    <>
+    <div className='flex flex-col h-screen'>
       <Head>
         <title>IMDb Clone</title>
         <meta name="description" content="IMDb clone" />
@@ -22,7 +22,7 @@ export default function Home(props: propsType) {
       <Header />
       <Navbar />
       <Results {...props} />
-    </>
+    </div>
   )
 }
 
